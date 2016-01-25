@@ -1,10 +1,11 @@
-
-/* 
+/*
+ * Copyright (C) 2015 Alessandro Beggiato <alessandro.beggiato@imtlucca.it>
+ * based on the Ubic2 project
  * Copyright (C) 2014 Francesco Burato
  * based on the Ubic project
  * Copyright (C) 2013 Paolo Baldan, Alberto Carraro
  * based on the Cunf project
- * Copyright (C) 2010, 2011 Cesar Rodriguez <cesar.rodriguez@lsv.ens-cachan.fr>
+ * Copyright (C) 2010, 2011  Cesar Rodriguez <cesar.rodriguez@lsv.ens-cachan.fr>
  * 
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by

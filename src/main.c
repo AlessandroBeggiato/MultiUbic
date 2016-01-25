@@ -190,11 +190,8 @@ void addLevelToTransitions() {
 
 int main (int argc, char **argv)
 {
-	//clock_t start, input, reduction, end;//ALESSANDRO: more time measurements
 	int opt, l, secure;
 	char *stoptr, *inpath, *outpath, *outformat;
-
-	//start = clock();//ALESSANDRO
 
 	/* initialize global parameters */
 	u.mark = 2;
@@ -291,14 +288,12 @@ int main (int argc, char **argv)
 	 */
 	addLevelToTransitions();
 
-	//input = clock();//ALESSANDRO
-
 	/* PAOLO: causal reduction applied to the net read from input  */
 	/* ALESSANDRO: updated for the multilevel scenario, added static checks to
 	 * quickly decide that a net is safe */
 	possiblyNotSecure = causal_reduction();
 	//reduction = clock();
-	possiblyNotSecure=1;//FIXME added this to run comparison tests, remove it for the release
+	//possiblyNotSecure=1;//FIXME added this to run comparison tests, remove it for the release
 	if(possiblyNotSecure){	//ALESSANDRO: added this if to optimize on surely secure nets
 		secure = unfold();
 		//end = clock();//ALESSANDRO
@@ -315,14 +310,14 @@ int main (int argc, char **argv)
 		}
 	}
 	else{
-		//printf("The net is %s\n", policy->isTransitive?"BNDC":"BINI");
+		printf("The net is %s\n", policy->isTransitive?"BNDC":"BINI");
 	}
 
 #ifdef CONFIG_DEBUG
 	db_mem ();
 #endif
 	rusage ();
-	/*PRINT ("time\t%.3f\n"
+	PRINT ("time\t%.3f\n"
 		"mem\t%lu\n"
 
 		"hist\t%d\n"
@@ -378,24 +373,16 @@ int main (int argc, char **argv)
 		u.unf.numegray,
 		u.unf.numeblack,
 		inpath);
-	printf("Time statistics:\n"
-			"Unfolding time: %f s \n"
-			"Unfolding + reduction time: %f s \n"
-			"Total time: %f s \n",
-			(double)(end-reduction)/CLOCKS_PER_SEC,
-			(double)(end-input)/CLOCKS_PER_SEC,
-			(double)(end-start)/CLOCKS_PER_SEC
-	);*/
 	/*
-	 * ALESSANDRO: adding a little feedback for the tester
+	 * ALESSANDRO: FIXME adding a little feedback for the tester, comment for release
 	 */
-	FILE * answer;
+	/*FILE * answer;
 	answer = fopen("answer.tmp", "w");
 	if(answer){//else don't bother
 		fprintf(answer, "%d,%.3f,%lu,%d\n", secure, (double)u.unf.usrtime / 1000.0, u.unf.vmsize, u.unf.numh);
 		printf("%d,%.3f,%lu,%d\n", secure, (double)u.unf.usrtime / 1000.0, u.unf.vmsize, u.unf.numh);
 		fclose(answer);
-	}
+	}*/
 	return EXIT_SUCCESS;
 }
 

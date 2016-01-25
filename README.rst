@@ -1,4 +1,128 @@
 ====================
+The MultiUbic Tool v.0.1
+====================
+This is a prototypical version of the tool MultiUbic (Multilevel Unfolding-Based
+Interference Checker) for checking BNDC (Bisimulation based Non Deducibility on
+Composition) and BINI (Bisimulation based Intransitive Non Interference) on safe
+Petri nets, in a mutlilevel security domain. 
+Both properties are non interference property aimed at characterising the absence
+of undesired information flows.
+
+The underlying idea is simple: a system is viewed as consisting of
+components at different levels of confidentiality, an a security policy describes
+which information flows among them are legal. The absence of a flow of
+information from a level H to another level L is captured by asking that the activity 
+of H does not determine visible effects, according to some selected
+observational semantics, at the low level. Nontheless flow from H
+to L is allowed when it is mediated by some other level D toward whom
+H is allowed to interfere.
+
+In the BNDC formalization, a process S in deemed free of interference
+whenever, for each level L of the domain, S alone, seen from the levels
+to whom L cannot interfere, is behaviourally equivalent
+to S interacting with any parallel system comprising only levels to whom
+L may interfere.
+In the BINI formalization, a process S is deemed free of interference
+whenever, for each level L in the domain, S from which we removed any other
+level toward whom L can legally interfere (S\D), seen from the levels toward whow
+L cannot interfere, is behaviourally equivalent to S\D interacting with any parallel
+system with only level L, both starting from any reachable state of S.
+
+In the setting of safe Petri nets, transitions are split as many sets as there
+are levels.
+Both the BNDC and the BINI properties can be characterized in terms of undesired interactions
+between transitions of levels not permitted to interfere by the security policy. The tool
+exploits a characterisation of such interactions expressed in terms of the unfolding semantics, as 
+direct causalities and direct conflicts between those transitions.
+
+The tool is based on Ubic2, a tool set for carrying out unfolding-based
+verification of contextual Petri nets of the BINI property in a three level
+setting, developed Francesco Burato.
+
+The MultiUbic Tool is developed and maintained by
+
+Alessandro Beggiato
+Sysma Research Unit 
+IMT School for Advanced Studies Lucca
+
+e-mail : alessandro.beggiato@imtlucca.it
+
+
+INSTALLATION
+------------
+
+In order to install MultiUbic move to the "MultiUbic/Release" folder and type the
+following commands:
+
+  make all
+
+The installation puts the binaries to the "MultiUbic/Release" folder from where
+you may copy them to suitable locations in your machine.
+
+The MultiUbic folder also includes a folder
+
+  * examples     the examples referred to in the paper 
+
+For input and output file formats, command options we refer to the
+cunf documentation (see below)
+
+USAGE 
+-----
+
+The input net must be expressed in the PEP ll_net format, and the input
+security policy must be specified in MDS format. The output
+can be produced in the internal 'cuf' format or as a dot file (simple
+or fancy). 
+
+The tool can generate an i-complete prefix or stop once the first (intranitive) weak
+causal place is found. When the fancy dot output format is chosen,
+weak causal places are depicted in red.
+
+For details on the file formats we refer to the CUNF
+documentation. We only mention that when defining the a net to be
+checked (in the PEP ll_net format) the confidentiality level of
+transitions is determined by the transition name: names are supposed
+to be in the format name_level.
+
+Executing MultiUbic without arguments, you'll get an overview of the
+command line options.
+
+Usage: ubic [OPTIONS] NETFILE POLICYFILE
+
+Argument NETFILE is a path to the .ll_net input file.
+Argument POLICYFILE is a path to the .mds policy file.
+
+The template for MDS_FORMAT is:
+MDS
+TRANSITIVE/INTRANSITIVE
+LVL #levels
+0 lvl_name
+1 lvl_name
+...
+#-1 lvl_name
+POLICY
+i TO j
+...
+
+Allowed OPTIONS are:
+-s [on|off]  Stop once the first weak causal place is found and report it.
+             (off by default, hence a prefix complete for interferences is
+             generated)
+-l NUMBER    Stop when NUMBER histories have been added
+-t NAME      Stop when transition NAME is inserted
+-d DEPTH     Unfold up to given DEPTH
+-o FILE      Output file to store the unfolding in.  If not provided,
+             defaults to NETFILE with the last 7 characters removed
+             (extension '.ll_net') plus a suffix depending option the -O
+-f FORMAT    Write unfolding in format FORMAT. Available formats: 'cuf',
+             'dot', 'fancy'.  Default is 'cuf'. In 'fancy' format weak
+             causal place representatives are depicted in red
+
+
+
+--- About the Ubic2 Tool ---
+
+====================
 The Ubic2 Tool v.0.1
 ====================
 This is a prototypical version of the tool UBIC2 (Unfolding-Based

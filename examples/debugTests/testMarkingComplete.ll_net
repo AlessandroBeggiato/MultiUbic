@@ -1,0 +1,34 @@
+PEP
+PetriBox
+FORMAT_N2
+% author "none"
+% title "a non BNDC net showing that marking completeness is not enough"
+% date ""
+% note ""
+% version ""
+PL
+1"p1"9@9M1
+2"p2"9@9
+3"p3"9@9
+4"p4"9@9
+5"p5"9@9
+TR
+6"l1_A"9@9
+7"l2_A"9@9
+8"l3_A"9@9
+9"t_B"9@9
+10"l0_A"9@9
+TP
+6<3
+6<5
+7<2
+7<5
+8<4
+9<3
+10<4
+PT
+1>6
+1>10
+1>7
+2>9
+3>8

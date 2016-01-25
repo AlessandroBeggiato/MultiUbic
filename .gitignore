@@ -1,0 +1,13 @@
+/Debug/ubic*
+/Release/ubic
+/Release/ubic*
+*.o
+*.d
+/Test Build
+/pep2dot
+.settings
+.cproject
+.project
+
+/Debug
+/Release

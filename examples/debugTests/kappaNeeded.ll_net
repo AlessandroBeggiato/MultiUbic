@@ -1,0 +1,41 @@
+PEP
+PetriBox
+FORMAT_N2
+% author "none"
+% title "a non-bini net demonstrating the need for kappa"
+% date ""
+% note ""
+% version ""
+PL
+1"p1"9@9M1
+2"p2"9@9M1
+3"r"9@9M1
+4"p"9@9
+5"q"9@9
+6"s"9@9
+7"pp"9@9
+8"end"9@9
+TR
+9"h_H"9@9
+10"l_L"9@9
+11"t_T"9@9
+12"d_D"9@9
+13"c_C"9@9
+TP
+9<3
+9<4
+10<3
+10<5
+11<6
+12<7
+13<8
+PT
+1>9
+2>10
+3>9
+3>10
+3>11
+4>13
+5>12
+6>13
+7>13

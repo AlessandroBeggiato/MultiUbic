@@ -105,6 +105,7 @@ i TO j
 ...
 
 Allowed OPTIONS are:
+
 -s [on|off]  Stop once the first weak causal place is found and report it.
              (off by default, hence a prefix complete for interferences is
              generated)

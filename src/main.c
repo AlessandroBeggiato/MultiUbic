@@ -56,7 +56,7 @@ void usage (void)
 {
 	fprintf(stderr,
 "\n"
-"The MULTIubic tool -- an unfolding based intransitive interference checker for multilevel domains\n"
+"The MultiUbic tool -- an unfolding based intransitive interference checker for multilevel domains\n"
 "Copyright (C) 2015 Alessandro Beggiato\n"
 "based on the Ubic2 project\n"
 "Copyright (C) 2014 Francesco Burato\n"
@@ -72,7 +72,7 @@ void usage (void)
 "not, see <http://www.gnu.org/licenses/>.\n"
 "\n"
 "\n"
-"Usage: ubic [OPTIONS] NETFILE POLICYFILE\n"
+"Usage: MultiUbic [OPTIONS] NETFILE POLICYFILE\n"
 "\n"
 "Argument NETFILE is a path to the .ll_net input file.\n"
 "Argument POLICYFILE is a path to the .mds policy file.");
@@ -93,7 +93,7 @@ fprintf(stderr,
 "              causal place representatives are depicted in red\n"
 "\n"
 "For more information, see http://www.math.unipd.it/~baldan/UBIC\n"
-"Branch eager v0.1, compiled %s\n", __DATE__);
+"Branch eager v0.2, compiled %s\n", __DATE__);
 
 	exit (EXIT_FAILURE);
 }
@@ -274,6 +274,7 @@ int main (int argc, char **argv)
 
 	/* load the input net */
 	DPRINT ("  Reading net from '%s'\n", inpath);
+	D1 (printf("  Reading net from '%s'\n", inpath);)
 	read_pep_net (inpath);
 	DPRINT ("  It is a %s net\n", u.net.isplain ? "plain" : "contextual");
 	nc_static_checks (stoptr);

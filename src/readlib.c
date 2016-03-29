@@ -61,7 +61,7 @@ void ReadCmdToken (FILE *file)
 	if (!string) sbuf = string = gl_malloc (sballoc = 512);
 
 	if (!isalnum((int)(*string++ = ReadCharComment(file))))
-		gl_err ("ReadCmdToken: alphanumerical string expected");
+		gl_err ("ReadCmdToken: alphanumerical string expected at line %d", HLinput_line);
 
 
 	len++;
@@ -121,7 +121,7 @@ void ReadNumber (FILE *file, int *result)
 	if (isdigit((int)digit))
 		number = digit - '0';
 	else
-		gl_err ("ReadNumber: digit expected");
+		gl_err ("ReadNumber: digit expected at line %d", HLinput_line);
 
 	while (isdigit((int)(digit = getc(file))))
 		number = number * 10 + digit - '0';
@@ -144,7 +144,7 @@ void ReadEnclString (FILE *file)
 	if (!str) sbuf = str = gl_malloc (sballoc = 512);
 
 	if ((delimiter = ReadCharComment(file)) != '\'' && delimiter != '"')
-	      gl_err ("ReadEnclString: string leading ' or \" expected");
+	      gl_err ("ReadEnclString: string leading ' or \" expected at line %d", HLinput_line);
 
 	while (!feof(file) && (*str = getc(file)) != delimiter)
 	{
@@ -170,6 +170,6 @@ void ReadCoordinates (FILE *file, int *x, int *y)
 {
 	ReadNumber(file,x);
 	if (ReadWhiteSpace(file) != '@')
-		gl_err ("ReadCoordinates: '@' expected");
+		gl_err ("ReadCoordinates: '@' expected at line %d", HLinput_line);
 	ReadNumber(file,y);
 }

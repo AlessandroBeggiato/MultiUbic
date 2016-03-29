@@ -41,7 +41,7 @@
 // higher DLVL defined => more verbose output
 
 //#define DLVL1
-//#define DLVL2
+#define DLVL2
 //#define DLVL3
 //#define DLVL4
 

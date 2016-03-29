@@ -87,20 +87,20 @@ void readMDS (char *mdsFileName){
 	}
 
 	ReadToken(infile);
-	if (strcmp(sbuf, "MDS")) {
+	if (!sbuf || strcmp(sbuf, "MDS")) {
 		fprintf(stderr,"Syntax error in the policy file: MDS expected\n");
 		exit(EXIT_FAILURE);
 	}
 	ReadNewline(infile);
 	ReadToken(infile);
-	if (!strcmp(sbuf, "TRANSITIVE"))transitive = 1;
-	else if (strcmp(sbuf, "INTRANSITIVE")){
+	if (!sbuf || !strcmp(sbuf, "TRANSITIVE"))transitive = 1;
+	else if (!sbuf || strcmp(sbuf, "INTRANSITIVE")){
 		fprintf(stderr,"Syntax error in the policy file: TRANSITIVE or INTRANSITIVE expected\n");
 		exit(EXIT_FAILURE);
 	}
 	ReadNewline(infile);
 	ReadToken(infile);
-	if (strcmp(sbuf, "LVL")) {
+	if (!sbuf || strcmp(sbuf, "LVL")) {
 		fprintf(stderr,"Syntax error in the policy file: LVL expected\n");
 		exit(EXIT_FAILURE);
 	}
@@ -130,7 +130,7 @@ void readMDS (char *mdsFileName){
 	}
 	ReadNewline(infile);
 	ReadToken(infile);
-	if (strcmp(sbuf, "POLICY")) {
+	if (!sbuf || strcmp(sbuf, "POLICY")) {
 		fprintf(stderr,"Syntax error in the policy file: POLICY expected\n");
 		exit(EXIT_FAILURE);
 	}

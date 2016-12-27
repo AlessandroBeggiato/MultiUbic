@@ -75,8 +75,8 @@ void usage (void)
 "Usage: MultiUbic [OPTIONS] NETFILE POLICYFILE\n"
 "\n"
 "Argument NETFILE is a path to the .ll_net input file.\n"
-"Argument POLICYFILE is a path to the .mds policy file.");
-printMDS_Format();
+"Argument POLICYFILE is a path to the .msd policy file.");
+printmsd_Format();
 fprintf(stderr,
 "Allowed OPTIONS are:\n"
 " -s [on|off]  Stop once the first weak causal place is found and report it.\n"
@@ -93,7 +93,7 @@ fprintf(stderr,
 "              causal place representatives are depicted in red\n"
 "\n"
 "For more information, see http://www.math.unipd.it/~baldan/UBIC\n"
-"Branch eager v0.2, compiled %s\n", __DATE__);
+"Branch eager v.0.3, compiled %s\n", __DATE__);
 
 	exit (EXIT_FAILURE);
 }
@@ -267,9 +267,9 @@ int main (int argc, char **argv)
 	}
 
 	/* ALESSANDRO: read the policy file, compute transitive closure it if it is transitive */
-	readMDS(policyPath);
+	readmsd(policyPath);
 	if(policy->isTransitive)applyTransitiveClosure();
-	D1(debugMDS();)
+	D1(debugmsd();)
 	/* ALESSANDRO: end of new code */
 
 	/* load the input net */

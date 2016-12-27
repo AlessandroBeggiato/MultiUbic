@@ -23,17 +23,17 @@
 
 #include <stdio.h>
 #include <ctype.h>
+#include <msd.h>
 #include <string.h>
 #include <stdlib.h>
 
 #include "readlib.h"
-#include "mds.h"
 #include "glue.h"
 
-void printMDS_Format(){
+void printmsd_Format(){
 	fprintf(stderr,
-	"  The template for MDS_FORMAT is:\n\n"
-	"  MDS\n"
+	"  The template for MSD_FORMAT is:\n\n"
+	"  MSD\n"
 	"  TRANSITIVE/INTRANSITIVE\n"
 	"  LVL #levels\n"
 	"  0 lvl_name\n"
@@ -75,20 +75,20 @@ void ReadToken (FILE *file){
 	*string = '\0';
 }
 
-void readMDS (char *mdsFileName){
+void readmsd (char *msdFileName){
 	FILE *infile;
 	int i,j;
 	int transitive = 0;
 	int counter = 0;
 	/* Open the file, read the header. */
-	if (!(infile = fopen(mdsFileName, "r"))){
-		fprintf(stderr,"'%s': cannot open for reading\n", mdsFileName);
+	if (!(infile = fopen(msdFileName, "r"))){
+		fprintf(stderr,"'%s': cannot open for reading\n", msdFileName);
 		exit(EXIT_FAILURE);
 	}
 
 	ReadToken(infile);
-	if (!sbuf || strcmp(sbuf, "MDS")) {
-		fprintf(stderr,"Syntax error in the policy file: MDS expected\n");
+	if (!sbuf || strcmp(sbuf, "msd")) {
+		fprintf(stderr,"Syntax error in the policy file: msd expected\n");
 		exit(EXIT_FAILURE);
 	}
 	ReadNewline(infile);
@@ -110,7 +110,7 @@ void readMDS (char *mdsFileName){
 		exit(EXIT_FAILURE);
 	}
 	//header read, I can now allocate the policy
-	initializeMDS(atoi(sbuf));
+	initializemsd(atoi(sbuf));
 	policy->isTransitive=transitive;
 	while(counter < policy->levelNumber){
 		ReadNewline(infile);
@@ -160,10 +160,10 @@ void readMDS (char *mdsFileName){
 	}
 }
 
-void initializeMDS(int levels){
-	//printf("Initialize MDS with %d levels\n", levels);
+void initializemsd(int levels){
+	//printf("Initialize msd with %d levels\n", levels);
 	int i,j;
-	policy = malloc(sizeof(struct mds));
+	policy = malloc(sizeof(struct msd));
 	policy->isTransitive=0;
 	policy->levelNumber=levels;
 	policy->levelNames = malloc(levels * sizeof(char*));
@@ -188,7 +188,7 @@ void applyTransitiveClosure(){
 	}
 }
 
-void debugMDS(){
+void debugmsd(){
 	printf(policy->isTransitive?"Transitive":"Intransitive");
 	printf(" policy:\n");
 	int i, j;

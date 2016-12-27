@@ -24,6 +24,7 @@
 #ifndef _GLOBAL_H_
 #define _GLOBAL_H_
 
+#include <msd.h>
 #include "ls/ls.h"
 #include "al/al.h"
 #include "bv/bv.h"
@@ -32,7 +33,6 @@
 // \FRANCESCO
 
 //ALESSANDRO
-#include "mds.h"
 
 struct place {
 	struct ls nod;	/* node for the list of places */

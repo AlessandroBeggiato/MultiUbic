@@ -21,28 +21,28 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef INCLUDE_MDS_H_
-#define INCLUDE_MDS_H_
+#ifndef INCLUDE_msd_H_
+#define INCLUDE_msd_H_
 
 /* ALESSANDRO
  * Struct to store the security policy and a macro to poll it.
  *
  * */
-struct mds {
+struct msd {
 	int isTransitive; //1 mean yes, and we must transitively close flow
 	int levelNumber; //how many level are there
 	char** levelNames; //human readable names for security levels
 	int* flow; //The adjacency matrix is stored in a single array
 };
 
-struct mds* policy;
+struct msd* policy;
 
 #define FLOW(X,Y) (policy->flow)[(policy->levelNumber * X) + Y]
 
-void readMDS (char *mdsFileName);
+void readmsd (char *msdFileName);
 void applyTransitiveClosure();
-void initializeMDS(int levels);
-void debugMDS();
-void printMDS_Format();
+void initializemsd(int levels);
+void debugmsd();
+void printmsd_Format();
 
-#endif /* INCLUDE_MDS_H_ */
+#endif /* INCLUDE_msd_H_ */

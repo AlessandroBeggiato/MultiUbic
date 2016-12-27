@@ -1,5 +1,5 @@
 ====================
-The MultiUbic Tool v.0.1
+The MultiUbic Tool v.0.3
 ====================
 This is a prototypical version of the tool MultiUbic (Multilevel Unfolding-Based
 Interference Checker) for checking BNDC (Bisimulation based Non Deducibility on

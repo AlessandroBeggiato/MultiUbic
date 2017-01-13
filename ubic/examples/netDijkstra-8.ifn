@@ -1,0 +1,2295 @@
+PLACE
+
+b[0]=F,
+b[0]=T,
+c[0]=F,
+c[0]=T,
+k=0,
+b[1]=F,
+b[1]=T,
+c[1]=F,
+c[1]=T,
+k=1,
+b[2]=F,
+b[2]=T,
+c[2]=F,
+c[2]=T,
+k=2,
+b[3]=F,
+b[3]=T,
+c[3]=F,
+c[3]=T,
+k=3,
+b[4]=F,
+b[4]=T,
+c[4]=F,
+c[4]=T,
+k=4,
+b[5]=F,
+b[5]=T,
+c[5]=F,
+c[5]=T,
+k=5,
+b[6]=F,
+b[6]=T,
+c[6]=F,
+c[6]=T,
+k=6,
+b[7]=F,
+b[7]=T,
+c[7]=F,
+c[7]=T,
+k=7,
+l0/0,
+l1/0,
+l2/0,
+l3/0,
+l4/0,
+l5/0,
+l6/0,
+l0/1,
+l1/1,
+l2/1,
+l3/1,
+l4/1,
+l5/1,
+l6/1,
+l0/2,
+l1/2,
+l2/2,
+l3/2,
+l4/2,
+l5/2,
+l6/2,
+l0/3,
+l1/3,
+l2/3,
+l3/3,
+l4/3,
+l5/3,
+l6/3,
+l0/4,
+l1/4,
+l2/4,
+l3/4,
+l4/4,
+l5/4,
+l6/4,
+l0/5,
+l1/5,
+l2/5,
+l3/5,
+l4/5,
+l5/5,
+l6/5,
+l0/6,
+l1/6,
+l2/6,
+l3/6,
+l4/6,
+l5/6,
+l6/6,
+l0/7,
+l1/7,
+l2/7,
+l3/7,
+l4/7,
+l5/7,
+l6/7;
+
+MARKING
+
+l0/0: 1,
+l0/4: 1,
+b[5]=T: 1,
+b[2]=T: 1,
+l0/5: 1,
+c[5]=T: 1,
+c[2]=T: 1,
+c[1]=T: 1,
+b[6]=T: 1,
+b[3]=T: 1,
+l0/2: 1,
+l0/6: 1,
+b[0]=T: 1,
+c[6]=T: 1,
+b[7]=T: 1,
+l0/1: 1,
+c[3]=T: 1,
+l0/7: 1,
+l0/3: 1,
+b[4]=T: 1,
+c[0]=T: 1,
+k=0: 1,
+c[7]=T: 1,
+c[4]=T: 1,
+b[1]=T: 1;
+
+TRANSITION b[0]_=F LOW
+CONSUME
+l0/0: 1,
+b[0]=T: 1;
+
+PRODUCE
+l1/0: 1,
+b[0]=F: 1;
+
+TRANSITION k=0?_goto_l4 LOW
+CONSUME
+k=0: 1,
+l1/0: 1;
+
+PRODUCE
+k=0: 1,
+l4/0: 1;
+
+TRANSITION k=1_&&_b[k]=T?_goto_l3/0 LOW
+CONSUME
+k=1: 1,
+b[1]=T: 1,
+l1/0: 1;
+
+PRODUCE
+k=1: 1,
+l3/0: 1,
+b[1]=T: 1;
+
+TRANSITION hk=1?_k_=0 HIGH
+CONSUME
+l3/0: 1,
+k=1: 1;
+
+PRODUCE
+k=0: 1,
+l1/0: 1;
+
+TRANSITION k=2_&&_b[k]=T?_goto_l3/0 LOW
+CONSUME
+k=2: 1,
+b[2]=T: 1,
+l1/0: 1;
+
+PRODUCE
+k=2: 1,
+l3/0: 1,
+b[2]=T: 1;
+
+TRANSITION _k=2?_k_=0 LOW
+CONSUME
+l3/0: 1,
+k=2: 1;
+
+PRODUCE
+k=0: 1,
+l1/0: 1;
+
+TRANSITION k=3_&&_b[k]=T?_goto_l3/0 LOW
+CONSUME
+k=3: 1,
+b[3]=T: 1,
+l1/0: 1;
+
+PRODUCE
+k=3: 1,
+l3/0: 1,
+b[3]=T: 1;
+
+TRANSITION _k=3?_k_=0 LOW
+CONSUME
+l3/0: 1,
+k=3: 1;
+
+PRODUCE
+k=0: 1,
+l1/0: 1;
+
+TRANSITION k=4_&&_b[k]=T?_goto_l3/0 LOW
+CONSUME
+k=4: 1,
+b[4]=T: 1,
+l1/0: 1;
+
+PRODUCE
+l3/0: 1,
+k=4: 1,
+b[4]=T: 1;
+
+TRANSITION _k=4?_k_=0 LOW
+CONSUME
+l3/0: 1,
+k=4: 1;
+
+PRODUCE
+k=0: 1,
+l1/0: 1;
+
+TRANSITION k=5_&&_b[k]=T?_goto_l3/0 LOW
+CONSUME
+b[5]=T: 1,
+k=5: 1,
+l1/0: 1;
+
+PRODUCE
+l3/0: 1,
+b[5]=T: 1,
+k=5: 1;
+
+TRANSITION _k=5?_k_=0 LOW
+CONSUME
+l3/0: 1,
+k=5: 1;
+
+PRODUCE
+k=0: 1,
+l1/0: 1;
+
+TRANSITION k=6_&&_b[k]=T?_goto_l3/0 LOW
+CONSUME
+b[6]=T: 1,
+k=6: 1,
+l1/0: 1;
+
+PRODUCE
+l3/0: 1,
+b[6]=T: 1,
+k=6: 1;
+
+TRANSITION _k=6?_k_=0 LOW
+CONSUME
+l3/0: 1,
+k=6: 1;
+
+PRODUCE
+k=0: 1,
+l1/0: 1;
+
+TRANSITION k=7_&&_b[k]=T?_goto_l3/0 LOW
+CONSUME
+b[7]=T: 1,
+k=7: 1,
+l1/0: 1;
+
+PRODUCE
+l3/0: 1,
+b[7]=T: 1,
+k=7: 1;
+
+TRANSITION _k=7?_k_=0 LOW
+CONSUME
+l3/0: 1,
+k=7: 1;
+
+PRODUCE
+k=0: 1,
+l1/0: 1;
+
+TRANSITION c[0]_=F LOW
+CONSUME
+c[0]=T: 1,
+l4/0: 1;
+
+PRODUCE
+l5/0: 1,
+c[0]=F: 1;
+
+TRANSITION forall_j!=0__c[j]=T?_goto_l6 LOW
+CONSUME
+c[5]=T: 1,
+c[2]=T: 1,
+c[1]=T: 1,
+c[3]=T: 1,
+c[7]=T: 1,
+c[6]=T: 1,
+c[4]=T: 1,
+l5/0: 1;
+
+PRODUCE
+c[5]=T: 1,
+c[2]=T: 1,
+c[1]=T: 1,
+c[3]=T: 1,
+c[7]=T: 1,
+c[6]=T: 1,
+c[4]=T: 1,
+l6/0: 1;
+
+TRANSITION c[1]=F?_goto_l2/0 LOW
+CONSUME
+l5/0: 1,
+c[1]=F: 1;
+
+PRODUCE
+l2/0: 1,
+c[1]=F: 1;
+
+TRANSITION c[2]=F?_goto_l2/0 LOW
+CONSUME
+l5/0: 1,
+c[2]=F: 1;
+
+PRODUCE
+l2/0: 1,
+c[2]=F: 1;
+
+TRANSITION c[3]=F?_goto_l2/0 LOW
+CONSUME
+l5/0: 1,
+c[3]=F: 1;
+
+PRODUCE
+l2/0: 1,
+c[3]=F: 1;
+
+TRANSITION c[4]=F?_goto_l2/0 LOW
+CONSUME
+l5/0: 1,
+c[4]=F: 1;
+
+PRODUCE
+l2/0: 1,
+c[4]=F: 1;
+
+TRANSITION c[5]=F?_goto_l2/0 LOW
+CONSUME
+l5/0: 1,
+c[5]=F: 1;
+
+PRODUCE
+c[5]=F: 1,
+l2/0: 1;
+
+TRANSITION c[6]=F?_goto_l2/0 LOW
+CONSUME
+l5/0: 1,
+c[6]=F: 1;
+
+PRODUCE
+l2/0: 1,
+c[6]=F: 1;
+
+TRANSITION c[7]=F?_goto_l2/0 LOW
+CONSUME
+l5/0: 1,
+c[7]=F: 1;
+
+PRODUCE
+l2/0: 1,
+c[7]=F: 1;
+
+TRANSITION c[0]_=T LOW
+CONSUME
+c[0]=F: 1,
+l2/0: 1;
+
+PRODUCE
+c[0]=T: 1,
+l1/0: 1;
+
+TRANSITION c[0]_=T__b[0]_=T LOW
+CONSUME
+c[0]=F: 1,
+l6/0: 1,
+b[0]=F: 1;
+
+PRODUCE
+c[0]=T: 1,
+l0/0: 1,
+b[0]=T: 1;
+
+TRANSITION b[1]_=F LOW
+CONSUME
+l0/1: 1,
+b[1]=T: 1;
+
+PRODUCE
+b[1]=F: 1,
+l1/1: 1;
+
+TRANSITION k=1?_goto_l4 LOW
+CONSUME
+k=1: 1,
+l1/1: 1;
+
+PRODUCE
+k=1: 1,
+l4/1: 1;
+
+TRANSITION k=0_&&_b[k]=T?_goto_l3/1 LOW
+CONSUME
+l1/1: 1,
+k=0: 1,
+b[0]=T: 1;
+
+PRODUCE
+l3/1: 1,
+k=0: 1,
+b[0]=T: 1;
+
+TRANSITION _k=0?_k_=1 LOW
+CONSUME
+l3/1: 1,
+k=0: 1;
+
+PRODUCE
+k=1: 1,
+l1/1: 1;
+
+TRANSITION k=2_&&_b[k]=T?_goto_l3/1 LOW
+CONSUME
+k=2: 1,
+l1/1: 1,
+b[2]=T: 1;
+
+PRODUCE
+k=2: 1,
+l3/1: 1,
+b[2]=T: 1;
+
+TRANSITION _k=2?_k_=1 LOW
+CONSUME
+k=2: 1,
+l3/1: 1;
+
+PRODUCE
+k=1: 1,
+l1/1: 1;
+
+TRANSITION k=3_&&_b[k]=T?_goto_l3/1 LOW
+CONSUME
+k=3: 1,
+l1/1: 1,
+b[3]=T: 1;
+
+PRODUCE
+k=3: 1,
+l3/1: 1,
+b[3]=T: 1;
+
+TRANSITION _k=3?_k_=1 LOW
+CONSUME
+k=3: 1,
+l3/1: 1;
+
+PRODUCE
+k=1: 1,
+l1/1: 1;
+
+TRANSITION k=4_&&_b[k]=T?_goto_l3/1 LOW
+CONSUME
+l1/1: 1,
+k=4: 1,
+b[4]=T: 1;
+
+PRODUCE
+l3/1: 1,
+k=4: 1,
+b[4]=T: 1;
+
+TRANSITION _k=4?_k_=1 LOW
+CONSUME
+l3/1: 1,
+k=4: 1;
+
+PRODUCE
+k=1: 1,
+l1/1: 1;
+
+TRANSITION k=5_&&_b[k]=T?_goto_l3/1 LOW
+CONSUME
+l1/1: 1,
+b[5]=T: 1,
+k=5: 1;
+
+PRODUCE
+b[5]=T: 1,
+l3/1: 1,
+k=5: 1;
+
+TRANSITION _k=5?_k_=1 LOW
+CONSUME
+l3/1: 1,
+k=5: 1;
+
+PRODUCE
+k=1: 1,
+l1/1: 1;
+
+TRANSITION k=6_&&_b[k]=T?_goto_l3/1 LOW
+CONSUME
+l1/1: 1,
+b[6]=T: 1,
+k=6: 1;
+
+PRODUCE
+l3/1: 1,
+b[6]=T: 1,
+k=6: 1;
+
+TRANSITION _k=6?_k_=1 LOW
+CONSUME
+l3/1: 1,
+k=6: 1;
+
+PRODUCE
+k=1: 1,
+l1/1: 1;
+
+TRANSITION k=7_&&_b[k]=T?_goto_l3/1 LOW
+CONSUME
+l1/1: 1,
+b[7]=T: 1,
+k=7: 1;
+
+PRODUCE
+l3/1: 1,
+b[7]=T: 1,
+k=7: 1;
+
+TRANSITION _k=7?_k_=1 LOW
+CONSUME
+l3/1: 1,
+k=7: 1;
+
+PRODUCE
+k=1: 1,
+l1/1: 1;
+
+TRANSITION c[1]_=F LOW
+CONSUME
+c[1]=T: 1,
+l4/1: 1;
+
+PRODUCE
+l5/1: 1,
+c[1]=F: 1;
+
+TRANSITION forall_j!=1__c[j]=T?_goto_l6 LOW
+CONSUME
+c[5]=T: 1,
+c[2]=T: 1,
+c[0]=T: 1,
+c[6]=T: 1,
+c[3]=T: 1,
+c[7]=T: 1,
+c[4]=T: 1,
+l5/1: 1;
+
+PRODUCE
+c[5]=T: 1,
+c[2]=T: 1,
+c[0]=T: 1,
+c[6]=T: 1,
+c[3]=T: 1,
+c[7]=T: 1,
+c[4]=T: 1,
+l6/1: 1;
+
+TRANSITION c[0]=F?_goto_l2/1 LOW
+CONSUME
+c[0]=F: 1,
+l5/1: 1;
+
+PRODUCE
+c[0]=F: 1,
+l2/1: 1;
+
+TRANSITION c[2]=F?_goto_l2/1 LOW
+CONSUME
+l5/1: 1,
+c[2]=F: 1;
+
+PRODUCE
+l2/1: 1,
+c[2]=F: 1;
+
+TRANSITION c[3]=F?_goto_l2/1 LOW
+CONSUME
+l5/1: 1,
+c[3]=F: 1;
+
+PRODUCE
+l2/1: 1,
+c[3]=F: 1;
+
+TRANSITION c[4]=F?_goto_l2/1 LOW
+CONSUME
+l5/1: 1,
+c[4]=F: 1;
+
+PRODUCE
+l2/1: 1,
+c[4]=F: 1;
+
+TRANSITION c[5]=F?_goto_l2/1 LOW
+CONSUME
+c[5]=F: 1,
+l5/1: 1;
+
+PRODUCE
+c[5]=F: 1,
+l2/1: 1;
+
+TRANSITION c[6]=F?_goto_l2/1 LOW
+CONSUME
+l5/1: 1,
+c[6]=F: 1;
+
+PRODUCE
+c[6]=F: 1,
+l2/1: 1;
+
+TRANSITION c[7]=F?_goto_l2/1 LOW
+CONSUME
+l5/1: 1,
+c[7]=F: 1;
+
+PRODUCE
+c[7]=F: 1,
+l2/1: 1;
+
+TRANSITION c[1]_=T LOW
+CONSUME
+l2/1: 1,
+c[1]=F: 1;
+
+PRODUCE
+l1/1: 1,
+c[1]=T: 1;
+
+TRANSITION c[1]_=T__b[1]_=T LOW
+CONSUME
+b[1]=F: 1,
+c[1]=F: 1,
+l6/1: 1;
+
+PRODUCE
+l0/1: 1,
+c[1]=T: 1,
+b[1]=T: 1;
+
+TRANSITION b[2]_=F LOW
+CONSUME
+l0/2: 1,
+b[2]=T: 1;
+
+PRODUCE
+b[2]=F: 1,
+l1/2: 1;
+
+TRANSITION k=2?_goto_l4 LOW
+CONSUME
+k=2: 1,
+l1/2: 1;
+
+PRODUCE
+k=2: 1,
+l4/2: 1;
+
+TRANSITION k=0_&&_b[k]=T?_goto_l3/2 LOW
+CONSUME
+k=0: 1,
+b[0]=T: 1,
+l1/2: 1;
+
+PRODUCE
+k=0: 1,
+b[0]=T: 1,
+l3/2: 1;
+
+TRANSITION _k=0?_k_=2 LOW
+CONSUME
+k=0: 1,
+l3/2: 1;
+
+PRODUCE
+k=2: 1,
+l1/2: 1;
+
+TRANSITION k=1_&&_b[k]=T?_goto_l3/2 LOW
+CONSUME
+k=1: 1,
+b[1]=T: 1,
+l1/2: 1;
+
+PRODUCE
+k=1: 1,
+b[1]=T: 1,
+l3/2: 1;
+
+TRANSITION hk=1?_k_=2 HIGH
+CONSUME
+k=1: 1,
+l3/2: 1;
+
+PRODUCE
+k=2: 1,
+l1/2: 1;
+
+TRANSITION k=3_&&_b[k]=T?_goto_l3/2 LOW
+CONSUME
+k=3: 1,
+b[3]=T: 1,
+l1/2: 1;
+
+PRODUCE
+k=3: 1,
+b[3]=T: 1,
+l3/2: 1;
+
+TRANSITION _k=3?_k_=2 LOW
+CONSUME
+k=3: 1,
+l3/2: 1;
+
+PRODUCE
+k=2: 1,
+l1/2: 1;
+
+TRANSITION k=4_&&_b[k]=T?_goto_l3/2 LOW
+CONSUME
+b[4]=T: 1,
+k=4: 1,
+l1/2: 1;
+
+PRODUCE
+k=4: 1,
+b[4]=T: 1,
+l3/2: 1;
+
+TRANSITION _k=4?_k_=2 LOW
+CONSUME
+k=4: 1,
+l3/2: 1;
+
+PRODUCE
+k=2: 1,
+l1/2: 1;
+
+TRANSITION k=5_&&_b[k]=T?_goto_l3/2 LOW
+CONSUME
+b[5]=T: 1,
+k=5: 1,
+l1/2: 1;
+
+PRODUCE
+b[5]=T: 1,
+k=5: 1,
+l3/2: 1;
+
+TRANSITION _k=5?_k_=2 LOW
+CONSUME
+k=5: 1,
+l3/2: 1;
+
+PRODUCE
+k=2: 1,
+l1/2: 1;
+
+TRANSITION k=6_&&_b[k]=T?_goto_l3/2 LOW
+CONSUME
+b[6]=T: 1,
+k=6: 1,
+l1/2: 1;
+
+PRODUCE
+b[6]=T: 1,
+k=6: 1,
+l3/2: 1;
+
+TRANSITION _k=6?_k_=2 LOW
+CONSUME
+k=6: 1,
+l3/2: 1;
+
+PRODUCE
+k=2: 1,
+l1/2: 1;
+
+TRANSITION k=7_&&_b[k]=T?_goto_l3/2 LOW
+CONSUME
+b[7]=T: 1,
+k=7: 1,
+l1/2: 1;
+
+PRODUCE
+b[7]=T: 1,
+k=7: 1,
+l3/2: 1;
+
+TRANSITION _k=7?_k_=2 LOW
+CONSUME
+k=7: 1,
+l3/2: 1;
+
+PRODUCE
+k=2: 1,
+l1/2: 1;
+
+TRANSITION c[2]_=F LOW
+CONSUME
+l4/2: 1,
+c[2]=T: 1;
+
+PRODUCE
+l5/2: 1,
+c[2]=F: 1;
+
+TRANSITION forall_j!=2__c[j]=T?_goto_l6 LOW
+CONSUME
+c[5]=T: 1,
+c[0]=T: 1,
+c[1]=T: 1,
+c[3]=T: 1,
+c[4]=T: 1,
+c[7]=T: 1,
+c[6]=T: 1,
+l5/2: 1;
+
+PRODUCE
+c[5]=T: 1,
+c[0]=T: 1,
+c[1]=T: 1,
+c[6]=T: 1,
+c[7]=T: 1,
+c[4]=T: 1,
+c[3]=T: 1,
+l6/2: 1;
+
+TRANSITION c[0]=F?_goto_l2/2 LOW
+CONSUME
+l5/2: 1,
+c[0]=F: 1;
+
+PRODUCE
+c[0]=F: 1,
+l2/2: 1;
+
+TRANSITION c[1]=F?_goto_l2/2 LOW
+CONSUME
+l5/2: 1,
+c[1]=F: 1;
+
+PRODUCE
+l2/2: 1,
+c[1]=F: 1;
+
+TRANSITION c[3]=F?_goto_l2/2 LOW
+CONSUME
+l5/2: 1,
+c[3]=F: 1;
+
+PRODUCE
+l2/2: 1,
+c[3]=F: 1;
+
+TRANSITION c[4]=F?_goto_l2/2 LOW
+CONSUME
+l5/2: 1,
+c[4]=F: 1;
+
+PRODUCE
+l2/2: 1,
+c[4]=F: 1;
+
+TRANSITION c[5]=F?_goto_l2/2 LOW
+CONSUME
+l5/2: 1,
+c[5]=F: 1;
+
+PRODUCE
+c[5]=F: 1,
+l2/2: 1;
+
+TRANSITION c[6]=F?_goto_l2/2 LOW
+CONSUME
+l5/2: 1,
+c[6]=F: 1;
+
+PRODUCE
+l2/2: 1,
+c[6]=F: 1;
+
+TRANSITION c[7]=F?_goto_l2/2 LOW
+CONSUME
+l5/2: 1,
+c[7]=F: 1;
+
+PRODUCE
+l2/2: 1,
+c[7]=F: 1;
+
+TRANSITION c[2]_=T LOW
+CONSUME
+l2/2: 1,
+c[2]=F: 1;
+
+PRODUCE
+l1/2: 1,
+c[2]=T: 1;
+
+TRANSITION c[2]_=T__b[2]_=T LOW
+CONSUME
+b[2]=F: 1,
+l6/2: 1,
+c[2]=F: 1;
+
+PRODUCE
+l0/2: 1,
+b[2]=T: 1,
+c[2]=T: 1;
+
+TRANSITION b[3]_=F LOW
+CONSUME
+l0/3: 1,
+b[3]=T: 1;
+
+PRODUCE
+l1/3: 1,
+b[3]=F: 1;
+
+TRANSITION k=3?_goto_l4 LOW
+CONSUME
+l1/3: 1,
+k=3: 1;
+
+PRODUCE
+k=3: 1,
+l4/3: 1;
+
+TRANSITION k=0_&&_b[k]=T?_goto_l3/3 LOW
+CONSUME
+l1/3: 1,
+k=0: 1,
+b[0]=T: 1;
+
+PRODUCE
+l3/3: 1,
+k=0: 1,
+b[0]=T: 1;
+
+TRANSITION _k=0?_k_=3 LOW
+CONSUME
+l3/3: 1,
+k=0: 1;
+
+PRODUCE
+k=3: 1,
+l1/3: 1;
+
+TRANSITION k=1_&&_b[k]=T?_goto_l3/3 LOW
+CONSUME
+l1/3: 1,
+k=1: 1,
+b[1]=T: 1;
+
+PRODUCE
+k=1: 1,
+l3/3: 1,
+b[1]=T: 1;
+
+TRANSITION hk=1?_k_=3 HIGH
+CONSUME
+k=1: 1,
+l3/3: 1;
+
+PRODUCE
+k=3: 1,
+l1/3: 1;
+
+TRANSITION k=2_&&_b[k]=T?_goto_l3/3 LOW
+CONSUME
+l1/3: 1,
+k=2: 1,
+b[2]=T: 1;
+
+PRODUCE
+k=2: 1,
+l3/3: 1,
+b[2]=T: 1;
+
+TRANSITION _k=2?_k_=3 LOW
+CONSUME
+k=2: 1,
+l3/3: 1;
+
+PRODUCE
+k=3: 1,
+l1/3: 1;
+
+TRANSITION k=4_&&_b[k]=T?_goto_l3/3 LOW
+CONSUME
+l1/3: 1,
+k=4: 1,
+b[4]=T: 1;
+
+PRODUCE
+l3/3: 1,
+k=4: 1,
+b[4]=T: 1;
+
+TRANSITION _k=4?_k_=3 LOW
+CONSUME
+l3/3: 1,
+k=4: 1;
+
+PRODUCE
+k=3: 1,
+l1/3: 1;
+
+TRANSITION k=5_&&_b[k]=T?_goto_l3/3 LOW
+CONSUME
+l1/3: 1,
+b[5]=T: 1,
+k=5: 1;
+
+PRODUCE
+l3/3: 1,
+b[5]=T: 1,
+k=5: 1;
+
+TRANSITION _k=5?_k_=3 LOW
+CONSUME
+l3/3: 1,
+k=5: 1;
+
+PRODUCE
+k=3: 1,
+l1/3: 1;
+
+TRANSITION k=6_&&_b[k]=T?_goto_l3/3 LOW
+CONSUME
+l1/3: 1,
+b[6]=T: 1,
+k=6: 1;
+
+PRODUCE
+l3/3: 1,
+b[6]=T: 1,
+k=6: 1;
+
+TRANSITION _k=6?_k_=3 LOW
+CONSUME
+l3/3: 1,
+k=6: 1;
+
+PRODUCE
+k=3: 1,
+l1/3: 1;
+
+TRANSITION k=7_&&_b[k]=T?_goto_l3/3 LOW
+CONSUME
+l1/3: 1,
+b[7]=T: 1,
+k=7: 1;
+
+PRODUCE
+l3/3: 1,
+b[7]=T: 1,
+k=7: 1;
+
+TRANSITION _k=7?_k_=3 LOW
+CONSUME
+l3/3: 1,
+k=7: 1;
+
+PRODUCE
+k=3: 1,
+l1/3: 1;
+
+TRANSITION c[3]_=F LOW
+CONSUME
+l4/3: 1,
+c[3]=T: 1;
+
+PRODUCE
+l5/3: 1,
+c[3]=F: 1;
+
+TRANSITION forall_j!=3__c[j]=T?_goto_l6 LOW
+CONSUME
+c[5]=T: 1,
+c[2]=T: 1,
+c[0]=T: 1,
+c[1]=T: 1,
+c[6]=T: 1,
+c[7]=T: 1,
+c[4]=T: 1,
+l5/3: 1;
+
+PRODUCE
+c[5]=T: 1,
+c[2]=T: 1,
+c[0]=T: 1,
+c[1]=T: 1,
+c[6]=T: 1,
+c[7]=T: 1,
+c[4]=T: 1,
+l6/3: 1;
+
+TRANSITION c[0]=F?_goto_l2/3 LOW
+CONSUME
+l5/3: 1,
+c[0]=F: 1;
+
+PRODUCE
+c[0]=F: 1,
+l2/3: 1;
+
+TRANSITION c[1]=F?_goto_l2/3 LOW
+CONSUME
+l5/3: 1,
+c[1]=F: 1;
+
+PRODUCE
+l2/3: 1,
+c[1]=F: 1;
+
+TRANSITION c[2]=F?_goto_l2/3 LOW
+CONSUME
+l5/3: 1,
+c[2]=F: 1;
+
+PRODUCE
+l2/3: 1,
+c[2]=F: 1;
+
+TRANSITION c[4]=F?_goto_l2/3 LOW
+CONSUME
+l5/3: 1,
+c[4]=F: 1;
+
+PRODUCE
+l2/3: 1,
+c[4]=F: 1;
+
+TRANSITION c[5]=F?_goto_l2/3 LOW
+CONSUME
+l5/3: 1,
+c[5]=F: 1;
+
+PRODUCE
+c[5]=F: 1,
+l2/3: 1;
+
+TRANSITION c[6]=F?_goto_l2/3 LOW
+CONSUME
+l5/3: 1,
+c[6]=F: 1;
+
+PRODUCE
+l2/3: 1,
+c[6]=F: 1;
+
+TRANSITION c[7]=F?_goto_l2/3 LOW
+CONSUME
+l5/3: 1,
+c[7]=F: 1;
+
+PRODUCE
+l2/3: 1,
+c[7]=F: 1;
+
+TRANSITION c[3]_=T LOW
+CONSUME
+l2/3: 1,
+c[3]=F: 1;
+
+PRODUCE
+l1/3: 1,
+c[3]=T: 1;
+
+TRANSITION c[3]_=T__b[3]_=T LOW
+CONSUME
+b[3]=F: 1,
+c[3]=F: 1,
+l6/3: 1;
+
+PRODUCE
+l0/3: 1,
+b[3]=T: 1,
+c[3]=T: 1;
+
+TRANSITION b[4]_=F LOW
+CONSUME
+l0/4: 1,
+b[4]=T: 1;
+
+PRODUCE
+l1/4: 1,
+b[4]=F: 1;
+
+TRANSITION k=4?_goto_l4 LOW
+CONSUME
+l1/4: 1,
+k=4: 1;
+
+PRODUCE
+k=4: 1,
+l4/4: 1;
+
+TRANSITION k=0_&&_b[k]=T?_goto_l3/4 LOW
+CONSUME
+l1/4: 1,
+k=0: 1,
+b[0]=T: 1;
+
+PRODUCE
+l3/4: 1,
+k=0: 1,
+b[0]=T: 1;
+
+TRANSITION _k=0?_k_=4 LOW
+CONSUME
+l3/4: 1,
+k=0: 1;
+
+PRODUCE
+l1/4: 1,
+k=4: 1;
+
+TRANSITION k=1_&&_b[k]=T?_goto_l3/4 LOW
+CONSUME
+k=1: 1,
+l1/4: 1,
+b[1]=T: 1;
+
+PRODUCE
+k=1: 1,
+l3/4: 1,
+b[1]=T: 1;
+
+TRANSITION hk=1?_k_=4 HIGH
+CONSUME
+k=1: 1,
+l3/4: 1;
+
+PRODUCE
+l1/4: 1,
+k=4: 1;
+
+TRANSITION k=2_&&_b[k]=T?_goto_l3/4 LOW
+CONSUME
+k=2: 1,
+l1/4: 1,
+b[2]=T: 1;
+
+PRODUCE
+k=2: 1,
+l3/4: 1,
+b[2]=T: 1;
+
+TRANSITION _k=2?_k_=4 LOW
+CONSUME
+k=2: 1,
+l3/4: 1;
+
+PRODUCE
+l1/4: 1,
+k=4: 1;
+
+TRANSITION k=3_&&_b[k]=T?_goto_l3/4 LOW
+CONSUME
+k=3: 1,
+l1/4: 1,
+b[3]=T: 1;
+
+PRODUCE
+k=3: 1,
+l3/4: 1,
+b[3]=T: 1;
+
+TRANSITION _k=3?_k_=4 LOW
+CONSUME
+k=3: 1,
+l3/4: 1;
+
+PRODUCE
+l1/4: 1,
+k=4: 1;
+
+TRANSITION k=5_&&_b[k]=T?_goto_l3/4 LOW
+CONSUME
+l1/4: 1,
+b[5]=T: 1,
+k=5: 1;
+
+PRODUCE
+b[5]=T: 1,
+k=5: 1,
+l3/4: 1;
+
+TRANSITION _k=5?_k_=4 LOW
+CONSUME
+l3/4: 1,
+k=5: 1;
+
+PRODUCE
+l1/4: 1,
+k=4: 1;
+
+TRANSITION k=6_&&_b[k]=T?_goto_l3/4 LOW
+CONSUME
+l1/4: 1,
+b[6]=T: 1,
+k=6: 1;
+
+PRODUCE
+l3/4: 1,
+b[6]=T: 1,
+k=6: 1;
+
+TRANSITION _k=6?_k_=4 LOW
+CONSUME
+l3/4: 1,
+k=6: 1;
+
+PRODUCE
+l1/4: 1,
+k=4: 1;
+
+TRANSITION k=7_&&_b[k]=T?_goto_l3/4 LOW
+CONSUME
+l1/4: 1,
+b[7]=T: 1,
+k=7: 1;
+
+PRODUCE
+l3/4: 1,
+b[7]=T: 1,
+k=7: 1;
+
+TRANSITION _k=7?_k_=4 LOW
+CONSUME
+l3/4: 1,
+k=7: 1;
+
+PRODUCE
+l1/4: 1,
+k=4: 1;
+
+TRANSITION c[4]_=F LOW
+CONSUME
+c[4]=T: 1,
+l4/4: 1;
+
+PRODUCE
+l5/4: 1,
+c[4]=F: 1;
+
+TRANSITION forall_j!=4__c[j]=T?_goto_l6 LOW
+CONSUME
+c[5]=T: 1,
+c[2]=T: 1,
+c[0]=T: 1,
+c[1]=T: 1,
+c[3]=T: 1,
+c[7]=T: 1,
+c[6]=T: 1,
+l5/4: 1;
+
+PRODUCE
+l6/4: 1,
+c[5]=T: 1,
+c[2]=T: 1,
+c[0]=T: 1,
+c[1]=T: 1,
+c[3]=T: 1,
+c[7]=T: 1,
+c[6]=T: 1;
+
+TRANSITION c[0]=F?_goto_l2/4 LOW
+CONSUME
+c[0]=F: 1,
+l5/4: 1;
+
+PRODUCE
+c[0]=F: 1,
+l2/4: 1;
+
+TRANSITION c[1]=F?_goto_l2/4 LOW
+CONSUME
+l5/4: 1,
+c[1]=F: 1;
+
+PRODUCE
+l2/4: 1,
+c[1]=F: 1;
+
+TRANSITION c[2]=F?_goto_l2/4 LOW
+CONSUME
+l5/4: 1,
+c[2]=F: 1;
+
+PRODUCE
+l2/4: 1,
+c[2]=F: 1;
+
+TRANSITION c[3]=F?_goto_l2/4 LOW
+CONSUME
+l5/4: 1,
+c[3]=F: 1;
+
+PRODUCE
+l2/4: 1,
+c[3]=F: 1;
+
+TRANSITION c[5]=F?_goto_l2/4 LOW
+CONSUME
+c[5]=F: 1,
+l5/4: 1;
+
+PRODUCE
+c[5]=F: 1,
+l2/4: 1;
+
+TRANSITION c[6]=F?_goto_l2/4 LOW
+CONSUME
+l5/4: 1,
+c[6]=F: 1;
+
+PRODUCE
+c[6]=F: 1,
+l2/4: 1;
+
+TRANSITION c[7]=F?_goto_l2/4 LOW
+CONSUME
+l5/4: 1,
+c[7]=F: 1;
+
+PRODUCE
+c[7]=F: 1,
+l2/4: 1;
+
+TRANSITION c[4]_=T LOW
+CONSUME
+l2/4: 1,
+c[4]=F: 1;
+
+PRODUCE
+c[4]=T: 1,
+l1/4: 1;
+
+TRANSITION c[4]_=T__b[4]_=T LOW
+CONSUME
+l6/4: 1,
+b[4]=F: 1,
+c[4]=F: 1;
+
+PRODUCE
+c[4]=T: 1,
+l0/4: 1,
+b[4]=T: 1;
+
+TRANSITION b[5]_=F LOW
+CONSUME
+l0/5: 1,
+b[5]=T: 1;
+
+PRODUCE
+b[5]=F: 1,
+l1/5: 1;
+
+TRANSITION k=5?_goto_l4 LOW
+CONSUME
+k=5: 1,
+l1/5: 1;
+
+PRODUCE
+l4/5: 1,
+k=5: 1;
+
+TRANSITION k=0_&&_b[k]=T?_goto_l3/5 LOW
+CONSUME
+k=0: 1,
+b[0]=T: 1,
+l1/5: 1;
+
+PRODUCE
+l3/5: 1,
+k=0: 1,
+b[0]=T: 1;
+
+TRANSITION _k=0?_k_=5 LOW
+CONSUME
+l3/5: 1,
+k=0: 1;
+
+PRODUCE
+k=5: 1,
+l1/5: 1;
+
+TRANSITION k=1_&&_b[k]=T?_goto_l3/5 LOW
+CONSUME
+k=1: 1,
+b[1]=T: 1,
+l1/5: 1;
+
+PRODUCE
+k=1: 1,
+l3/5: 1,
+b[1]=T: 1;
+
+TRANSITION hk=1?_k_=5 HIGH
+CONSUME
+l3/5: 1,
+k=1: 1;
+
+PRODUCE
+k=5: 1,
+l1/5: 1;
+
+TRANSITION k=2_&&_b[k]=T?_goto_l3/5 LOW
+CONSUME
+k=2: 1,
+b[2]=T: 1,
+l1/5: 1;
+
+PRODUCE
+k=2: 1,
+l3/5: 1,
+b[2]=T: 1;
+
+TRANSITION _k=2?_k_=5 LOW
+CONSUME
+l3/5: 1,
+k=2: 1;
+
+PRODUCE
+k=5: 1,
+l1/5: 1;
+
+TRANSITION k=3_&&_b[k]=T?_goto_l3/5 LOW
+CONSUME
+k=3: 1,
+b[3]=T: 1,
+l1/5: 1;
+
+PRODUCE
+k=3: 1,
+l3/5: 1,
+b[3]=T: 1;
+
+TRANSITION _k=3?_k_=5 LOW
+CONSUME
+l3/5: 1,
+k=3: 1;
+
+PRODUCE
+k=5: 1,
+l1/5: 1;
+
+TRANSITION k=4_&&_b[k]=T?_goto_l3/5 LOW
+CONSUME
+k=4: 1,
+b[4]=T: 1,
+l1/5: 1;
+
+PRODUCE
+l3/5: 1,
+k=4: 1,
+b[4]=T: 1;
+
+TRANSITION _k=4?_k_=5 LOW
+CONSUME
+l3/5: 1,
+k=4: 1;
+
+PRODUCE
+k=5: 1,
+l1/5: 1;
+
+TRANSITION k=6_&&_b[k]=T?_goto_l3/5 LOW
+CONSUME
+b[6]=T: 1,
+k=6: 1,
+l1/5: 1;
+
+PRODUCE
+l3/5: 1,
+b[6]=T: 1,
+k=6: 1;
+
+TRANSITION _k=6?_k_=5 LOW
+CONSUME
+l3/5: 1,
+k=6: 1;
+
+PRODUCE
+k=5: 1,
+l1/5: 1;
+
+TRANSITION k=7_&&_b[k]=T?_goto_l3/5 LOW
+CONSUME
+b[7]=T: 1,
+k=7: 1,
+l1/5: 1;
+
+PRODUCE
+l3/5: 1,
+b[7]=T: 1,
+k=7: 1;
+
+TRANSITION _k=7?_k_=5 LOW
+CONSUME
+l3/5: 1,
+k=7: 1;
+
+PRODUCE
+k=5: 1,
+l1/5: 1;
+
+TRANSITION c[5]_=F LOW
+CONSUME
+c[5]=T: 1,
+l4/5: 1;
+
+PRODUCE
+l5/5: 1,
+c[5]=F: 1;
+
+TRANSITION forall_j!=5__c[j]=T?_goto_l6 LOW
+CONSUME
+c[2]=T: 1,
+c[0]=T: 1,
+c[1]=T: 1,
+c[3]=T: 1,
+c[7]=T: 1,
+c[6]=T: 1,
+c[4]=T: 1,
+l5/5: 1;
+
+PRODUCE
+c[2]=T: 1,
+c[0]=T: 1,
+c[1]=T: 1,
+c[3]=T: 1,
+c[7]=T: 1,
+c[6]=T: 1,
+c[4]=T: 1,
+l6/5: 1;
+
+TRANSITION c[0]=F?_goto_l2/5 LOW
+CONSUME
+l5/5: 1,
+c[0]=F: 1;
+
+PRODUCE
+c[0]=F: 1,
+l2/5: 1;
+
+TRANSITION c[1]=F?_goto_l2/5 LOW
+CONSUME
+l5/5: 1,
+c[1]=F: 1;
+
+PRODUCE
+l2/5: 1,
+c[1]=F: 1;
+
+TRANSITION c[2]=F?_goto_l2/5 LOW
+CONSUME
+l5/5: 1,
+c[2]=F: 1;
+
+PRODUCE
+l2/5: 1,
+c[2]=F: 1;
+
+TRANSITION c[3]=F?_goto_l2/5 LOW
+CONSUME
+l5/5: 1,
+c[3]=F: 1;
+
+PRODUCE
+l2/5: 1,
+c[3]=F: 1;
+
+TRANSITION c[4]=F?_goto_l2/5 LOW
+CONSUME
+l5/5: 1,
+c[4]=F: 1;
+
+PRODUCE
+l2/5: 1,
+c[4]=F: 1;
+
+TRANSITION c[6]=F?_goto_l2/5 LOW
+CONSUME
+l5/5: 1,
+c[6]=F: 1;
+
+PRODUCE
+l2/5: 1,
+c[6]=F: 1;
+
+TRANSITION c[7]=F?_goto_l2/5 LOW
+CONSUME
+l5/5: 1,
+c[7]=F: 1;
+
+PRODUCE
+l2/5: 1,
+c[7]=F: 1;
+
+TRANSITION c[5]_=T LOW
+CONSUME
+c[5]=F: 1,
+l2/5: 1;
+
+PRODUCE
+c[5]=T: 1,
+l1/5: 1;
+
+TRANSITION c[5]_=T__b[5]_=T LOW
+CONSUME
+b[5]=F: 1,
+c[5]=F: 1,
+l6/5: 1;
+
+PRODUCE
+b[5]=T: 1,
+c[5]=T: 1,
+l0/5: 1;
+
+TRANSITION b[6]_=F LOW
+CONSUME
+b[6]=T: 1,
+l0/6: 1;
+
+PRODUCE
+l1/6: 1,
+b[6]=F: 1;
+
+TRANSITION k=6?_goto_l4 LOW
+CONSUME
+l1/6: 1,
+k=6: 1;
+
+PRODUCE
+l4/6: 1,
+k=6: 1;
+
+TRANSITION k=0_&&_b[k]=T?_goto_l3/6 LOW
+CONSUME
+l1/6: 1,
+k=0: 1,
+b[0]=T: 1;
+
+PRODUCE
+l3/6: 1,
+k=0: 1,
+b[0]=T: 1;
+
+TRANSITION _k=0?_k_=6 LOW
+CONSUME
+l3/6: 1,
+k=0: 1;
+
+PRODUCE
+l1/6: 1,
+k=6: 1;
+
+TRANSITION k=1_&&_b[k]=T?_goto_l3/6 LOW
+CONSUME
+l1/6: 1,
+k=1: 1,
+b[1]=T: 1;
+
+PRODUCE
+k=1: 1,
+l3/6: 1,
+b[1]=T: 1;
+
+TRANSITION hk=1?_k_=6 HIGH
+CONSUME
+k=1: 1,
+l3/6: 1;
+
+PRODUCE
+l1/6: 1,
+k=6: 1;
+
+TRANSITION k=2_&&_b[k]=T?_goto_l3/6 LOW
+CONSUME
+l1/6: 1,
+k=2: 1,
+b[2]=T: 1;
+
+PRODUCE
+k=2: 1,
+l3/6: 1,
+b[2]=T: 1;
+
+TRANSITION _k=2?_k_=6 LOW
+CONSUME
+k=2: 1,
+l3/6: 1;
+
+PRODUCE
+l1/6: 1,
+k=6: 1;
+
+TRANSITION k=3_&&_b[k]=T?_goto_l3/6 LOW
+CONSUME
+l1/6: 1,
+k=3: 1,
+b[3]=T: 1;
+
+PRODUCE
+k=3: 1,
+l3/6: 1,
+b[3]=T: 1;
+
+TRANSITION _k=3?_k_=6 LOW
+CONSUME
+k=3: 1,
+l3/6: 1;
+
+PRODUCE
+l1/6: 1,
+k=6: 1;
+
+TRANSITION k=4_&&_b[k]=T?_goto_l3/6 LOW
+CONSUME
+l1/6: 1,
+k=4: 1,
+b[4]=T: 1;
+
+PRODUCE
+l3/6: 1,
+k=4: 1,
+b[4]=T: 1;
+
+TRANSITION _k=4?_k_=6 LOW
+CONSUME
+l3/6: 1,
+k=4: 1;
+
+PRODUCE
+l1/6: 1,
+k=6: 1;
+
+TRANSITION k=5_&&_b[k]=T?_goto_l3/6 LOW
+CONSUME
+l1/6: 1,
+b[5]=T: 1,
+k=5: 1;
+
+PRODUCE
+l3/6: 1,
+b[5]=T: 1,
+k=5: 1;
+
+TRANSITION _k=5?_k_=6 LOW
+CONSUME
+l3/6: 1,
+k=5: 1;
+
+PRODUCE
+l1/6: 1,
+k=6: 1;
+
+TRANSITION k=7_&&_b[k]=T?_goto_l3/6 LOW
+CONSUME
+l1/6: 1,
+b[7]=T: 1,
+k=7: 1;
+
+PRODUCE
+l3/6: 1,
+b[7]=T: 1,
+k=7: 1;
+
+TRANSITION _k=7?_k_=6 LOW
+CONSUME
+l3/6: 1,
+k=7: 1;
+
+PRODUCE
+l1/6: 1,
+k=6: 1;
+
+TRANSITION c[6]_=F LOW
+CONSUME
+c[6]=T: 1,
+l4/6: 1;
+
+PRODUCE
+l5/6: 1,
+c[6]=F: 1;
+
+TRANSITION forall_j!=6__c[j]=T?_goto_l6 LOW
+CONSUME
+c[5]=T: 1,
+c[2]=T: 1,
+c[0]=T: 1,
+c[1]=T: 1,
+c[3]=T: 1,
+c[7]=T: 1,
+c[4]=T: 1,
+l5/6: 1;
+
+PRODUCE
+c[5]=T: 1,
+c[2]=T: 1,
+c[0]=T: 1,
+c[1]=T: 1,
+c[3]=T: 1,
+c[7]=T: 1,
+c[4]=T: 1,
+l6/6: 1;
+
+TRANSITION c[0]=F?_goto_l2/6 LOW
+CONSUME
+l5/6: 1,
+c[0]=F: 1;
+
+PRODUCE
+c[0]=F: 1,
+l2/6: 1;
+
+TRANSITION c[1]=F?_goto_l2/6 LOW
+CONSUME
+l5/6: 1,
+c[1]=F: 1;
+
+PRODUCE
+l2/6: 1,
+c[1]=F: 1;
+
+TRANSITION c[2]=F?_goto_l2/6 LOW
+CONSUME
+l5/6: 1,
+c[2]=F: 1;
+
+PRODUCE
+l2/6: 1,
+c[2]=F: 1;
+
+TRANSITION c[3]=F?_goto_l2/6 LOW
+CONSUME
+l5/6: 1,
+c[3]=F: 1;
+
+PRODUCE
+l2/6: 1,
+c[3]=F: 1;
+
+TRANSITION c[4]=F?_goto_l2/6 LOW
+CONSUME
+l5/6: 1,
+c[4]=F: 1;
+
+PRODUCE
+l2/6: 1,
+c[4]=F: 1;
+
+TRANSITION c[5]=F?_goto_l2/6 LOW
+CONSUME
+l5/6: 1,
+c[5]=F: 1;
+
+PRODUCE
+c[5]=F: 1,
+l2/6: 1;
+
+TRANSITION c[7]=F?_goto_l2/6 LOW
+CONSUME
+l5/6: 1,
+c[7]=F: 1;
+
+PRODUCE
+c[7]=F: 1,
+l2/6: 1;
+
+TRANSITION c[6]_=T LOW
+CONSUME
+c[6]=F: 1,
+l2/6: 1;
+
+PRODUCE
+l1/6: 1,
+c[6]=T: 1;
+
+TRANSITION c[6]_=T__b[6]_=T LOW
+CONSUME
+b[6]=F: 1,
+c[6]=F: 1,
+l6/6: 1;
+
+PRODUCE
+b[6]=T: 1,
+l0/6: 1,
+c[6]=T: 1;
+
+TRANSITION b[7]_=F LOW
+CONSUME
+l0/7: 1,
+b[7]=T: 1;
+
+PRODUCE
+b[7]=F: 1,
+l1/7: 1;
+
+TRANSITION k=7?_goto_l4 LOW
+CONSUME
+k=7: 1,
+l1/7: 1;
+
+PRODUCE
+l4/7: 1,
+k=7: 1;
+
+TRANSITION k=0_&&_b[k]=T?_goto_l3/7 LOW
+CONSUME
+k=0: 1,
+b[0]=T: 1,
+l1/7: 1;
+
+PRODUCE
+k=0: 1,
+b[0]=T: 1,
+l3/7: 1;
+
+TRANSITION _k=0?_k_=7 LOW
+CONSUME
+k=0: 1,
+l3/7: 1;
+
+PRODUCE
+l1/7: 1,
+k=7: 1;
+
+TRANSITION k=1_&&_b[k]=T?_goto_l3/7 LOW
+CONSUME
+k=1: 1,
+b[1]=T: 1,
+l1/7: 1;
+
+PRODUCE
+k=1: 1,
+b[1]=T: 1,
+l3/7: 1;
+
+TRANSITION hk=1?_k_=7 HIGH
+CONSUME
+k=1: 1,
+l3/7: 1;
+
+PRODUCE
+l1/7: 1,
+k=7: 1;
+
+TRANSITION k=2_&&_b[k]=T?_goto_l3/7 LOW
+CONSUME
+k=2: 1,
+b[2]=T: 1,
+l1/7: 1;
+
+PRODUCE
+k=2: 1,
+b[2]=T: 1,
+l3/7: 1;
+
+TRANSITION _k=2?_k_=7 LOW
+CONSUME
+k=2: 1,
+l3/7: 1;
+
+PRODUCE
+l1/7: 1,
+k=7: 1;
+
+TRANSITION k=3_&&_b[k]=T?_goto_l3/7 LOW
+CONSUME
+k=3: 1,
+b[3]=T: 1,
+l1/7: 1;
+
+PRODUCE
+k=3: 1,
+b[3]=T: 1,
+l3/7: 1;
+
+TRANSITION _k=3?_k_=7 LOW
+CONSUME
+k=3: 1,
+l3/7: 1;
+
+PRODUCE
+l1/7: 1,
+k=7: 1;
+
+TRANSITION k=4_&&_b[k]=T?_goto_l3/7 LOW
+CONSUME
+b[4]=T: 1,
+k=4: 1,
+l1/7: 1;
+
+PRODUCE
+k=4: 1,
+b[4]=T: 1,
+l3/7: 1;
+
+TRANSITION _k=4?_k_=7 LOW
+CONSUME
+k=4: 1,
+l3/7: 1;
+
+PRODUCE
+l1/7: 1,
+k=7: 1;
+
+TRANSITION k=5_&&_b[k]=T?_goto_l3/7 LOW
+CONSUME
+b[5]=T: 1,
+k=5: 1,
+l1/7: 1;
+
+PRODUCE
+b[5]=T: 1,
+k=5: 1,
+l3/7: 1;
+
+TRANSITION _k=5?_k_=7 LOW
+CONSUME
+k=5: 1,
+l3/7: 1;
+
+PRODUCE
+l1/7: 1,
+k=7: 1;
+
+TRANSITION k=6_&&_b[k]=T?_goto_l3/7 LOW
+CONSUME
+b[6]=T: 1,
+k=6: 1,
+l1/7: 1;
+
+PRODUCE
+b[6]=T: 1,
+k=6: 1,
+l3/7: 1;
+
+TRANSITION _k=6?_k_=7 LOW
+CONSUME
+k=6: 1,
+l3/7: 1;
+
+PRODUCE
+l1/7: 1,
+k=7: 1;
+
+TRANSITION c[7]_=F LOW
+CONSUME
+l4/7: 1,
+c[7]=T: 1;
+
+PRODUCE
+l5/7: 1,
+c[7]=F: 1;
+
+TRANSITION forall_j!=7__c[j]=T?_goto_l6 LOW
+CONSUME
+c[5]=T: 1,
+c[2]=T: 1,
+c[0]=T: 1,
+c[1]=T: 1,
+c[3]=T: 1,
+c[4]=T: 1,
+c[6]=T: 1,
+l5/7: 1;
+
+PRODUCE
+c[5]=T: 1,
+c[2]=T: 1,
+c[0]=T: 1,
+c[1]=T: 1,
+c[3]=T: 1,
+c[6]=T: 1,
+c[4]=T: 1,
+l6/7: 1;
+
+TRANSITION c[0]=F?_goto_l2/7 LOW
+CONSUME
+l5/7: 1,
+c[0]=F: 1;
+
+PRODUCE
+l2/7: 1,
+c[0]=F: 1;
+
+TRANSITION c[1]=F?_goto_l2/7 LOW
+CONSUME
+l5/7: 1,
+c[1]=F: 1;
+
+PRODUCE
+l2/7: 1,
+c[1]=F: 1;
+
+TRANSITION c[2]=F?_goto_l2/7 LOW
+CONSUME
+l5/7: 1,
+c[2]=F: 1;
+
+PRODUCE
+l2/7: 1,
+c[2]=F: 1;
+
+TRANSITION c[3]=F?_goto_l2/7 LOW
+CONSUME
+l5/7: 1,
+c[3]=F: 1;
+
+PRODUCE
+l2/7: 1,
+c[3]=F: 1;
+
+TRANSITION c[4]=F?_goto_l2/7 LOW
+CONSUME
+l5/7: 1,
+c[4]=F: 1;
+
+PRODUCE
+l2/7: 1,
+c[4]=F: 1;
+
+TRANSITION c[5]=F?_goto_l2/7 LOW
+CONSUME
+l5/7: 1,
+c[5]=F: 1;
+
+PRODUCE
+l2/7: 1,
+c[5]=F: 1;
+
+TRANSITION c[6]=F?_goto_l2/7 LOW
+CONSUME
+l5/7: 1,
+c[6]=F: 1;
+
+PRODUCE
+l2/7: 1,
+c[6]=F: 1;
+
+TRANSITION c[7]_=T LOW
+CONSUME
+l2/7: 1,
+c[7]=F: 1;
+
+PRODUCE
+c[7]=T: 1,
+l1/7: 1;
+
+TRANSITION c[7]_=T__b[7]_=T LOW
+CONSUME
+c[7]=F: 1,
+b[7]=F: 1,
+l6/7: 1;
+
+PRODUCE
+l0/7: 1,
+b[7]=T: 1,
+c[7]=T: 1;
+

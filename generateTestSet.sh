@@ -5,7 +5,6 @@ destDir="./TestSystems/T/MultiUbic"
 ubicDir="./TestSystems/T/UBIC2"
 
 
-
 ready=1
 echo "Net generator..."
 
@@ -30,8 +29,8 @@ if (( $ready < 1 ))
 then
 	echo "Some tools are missing. Run make tools or make all to build them"
 else
-
-	for N in {100..300..10}
+	N=100
+	while [ $N  -lt 301 ]
 	do
 		echo "*******************************"
 		echo "Generating MultiUbic test nets: size $N / 300"
@@ -56,13 +55,15 @@ else
 		mv $destDir/$net $ubicDir
 		
 		L=3
-		for E in 0 3 6
+		E=0
+		while [ $E -lt 7 ]
 		do
 			./bin/testNetGen -n $N -l $L -e $E $destDir
 			net=TestNet-$N-$L-$E
 			./bin/partitioner $destDir/$net.ll_net $destDir/$net.msd
 			mv $destDir/$net $ubicDir
-		done	
+			E=$[$E + 3 ]
+		done
+		N=$[ $N + 10 ]	
 	done
-	
 fi
